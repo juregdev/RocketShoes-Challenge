@@ -18,7 +18,7 @@ function dropMenu(){
     menu.style.transform ="translateX(0)"
     line1.style.transform='rotate(45deg)'
     line2.style.transform='rotate(-45deg)' 
-    line1.style.top='0.6rem' 
+    line1.style.top='0.7rem' 
     line2.style.top='-0.7rem'
     body.style.overflow = "hidden"
 
