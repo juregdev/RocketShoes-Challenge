@@ -20,12 +20,14 @@
 
 body, html{
   width:100vw;
-  height: max-content;
+  height: 100vh;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body{
+
   overflow-x: hidden;
   background: var(--background);
 }
@@ -49,7 +51,7 @@ header{
 }
 
 #menu nav ul li a{
-  display: block;
+  
   text-decoration: none;
   color: var(--text);
   font-weight: 700;
@@ -61,6 +63,8 @@ header{
   gap: 1rem;
 }
 
+
+
 input{
   border: none;
   height: 2rem;
@@ -71,6 +75,103 @@ input:focus{outline: none;}
   border: 1px solid var(--text-description);
   padding: 0.5rem;
   background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+@media  screen and (max-width:1200px) {
+  #menu nav ul{gap:45px}
+  #menu nav ul li a{font-size: 20px;}
+  input{height: 1.5rem;} 
+}
+
+@media  screen and (max-width:1000px) {
+
+  #menu nav ul{gap:2rem}
+  #menu nav ul li a{font-size: 18px;}
+  input{height: 1rem;}
+  
+}
+
+@media screen and (max-width:850px) {
+  #logo, #menu, #searchBag{display: none;}
+}
+
+#menuMobile{
+  width: 100vw;
+  height: 110vh;
+  position: fixed;
+  z-index: 1;
+  background: var(--background);
+  transform: translateX(110%);
+  transition: transform 1s ease-in-out;
+}
+
+#menuMobile nav ul li{
+  text-align: center;
+  margin: 3rem auto 3rem auto;
+  
+}
+
+#menuMobile nav ul{padding-top: 15%;}
+
+#menuMobile nav ul li a{
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 24px;
+
+}
+
+#logoMobile{margin: 0;}
+#logoMobile img{
+  position: fixed;
+  left: 4rem;
+  z-index: 10;
+}
+
+#searchMobile{
+  position: fixed;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  z-index: 10;
+  margin: auto;
+}
+
+#burguer{
+  position: fixed;
+  right: 4rem;
+  z-index: 10;
+
+}
+
+#line1, #line2, #line3{height: 0.2rem;
+  width: 2rem;
+  background-color: #000;
+  margin-top: 0.5rem;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+@media screen and (min-width:849px) {
+#burguer, #logoMobile, #menuMobile, #searchMobile{display: none;}
+}
+
+@media screen and (max-width:500px){
+  #burguer{
+    top:1rem
+  }
+  #logoMobile img{
+  top: 1rem;}
+  #menuMobile{
+    top: 0;}
+    #menuMobile nav ul{padding:0;
+    }
+  header{top:4rem;
+    background:var(--background);
+  }
+
 }
 
 #conteiner{
@@ -80,26 +181,31 @@ input:focus{outline: none;}
 
 #description{
   width:37.5% ;
-  padding-left: 7rem;
-
 }
 
 #vitrine{
   width: 62.5%;
   height: 100vh;
+  padding-bottom: 2rem;
   background: var(--main-background);
 }
 
 #vitrine img{
   display: block;
-  margin-top: 5% ;
+  position: relative;
+  top:15%;
   width: 35vw;
 
+}
+
+#galeria{position: relative;
+top: 15%;
 }
 
 #galeria section{display:flex ;
   overflow: hidden;
   gap: 1rem;
+ width: 50vw;
 }
 
 #galeria {display: flex;
@@ -107,7 +213,7 @@ input:focus{outline: none;}
   
 }
 #galeria section img{display: block;
-width: 100%;
+width:30%;
 height: 100%;
 object-fit: cover;
 }
@@ -138,15 +244,58 @@ margin: 2rem auto 2rem auto;
   color: #E5E5E5;
   border: none;
   border-radius: 3px;
-  position: block;
+  display: block;
   margin: 2rem auto auto auto;
   cursor: pointer;
+  
 }
+@media screen and (max-width:300px){
+  
+  #description h1{font-size: 40px;
+  text-align: center;
+padding-left: 2rem;
+padding-right: 2rem;}
+  #description button{font-size:18px}
+
+  #description p{font-size: 12px;}
+
+
+}
+
+@media screen and (max-width:1000px){
+  #conteiner{
+    display: block;
+    margin-top: 10rem;
+  }
+
+  #description, #description div{
+    text-align: center;
+    width: 100vw;
+    padding-left: 0;
+    margin-bottom: 3rem;
+  }
+
+  #vitrine{width: 100vw;
+  height: 100%;}
+
+  #description button {width: 80vw;}
+}
+
+@media screen and (max-width:1000px){#galeria section{width: 100vw;}
+#galeria section img{width: 30vw;}
+
+#vitrine img{width: 100%;}
+}
+
+
+
+
 
 footer {width: 100vw;
 }
 
 footer #mainFooter{ display: flex;}
+
 #mainFooter div{
   height: 10rem;
   width: 16.6%;
@@ -158,7 +307,6 @@ footer #mainFooter{ display: flex;}
 
 #footerLink {
   text-align: center;
-
 }
 
 #footerLink a{
@@ -186,4 +334,15 @@ iframe{
   color: #FFF;
   font-weight: 700;
   font-size: 24px;
+}
+
+@media screen and (max-width:1000px){
+  footer #mainFooter{display: block;}
+  #mainFooter div{
+    height: 10rem;
+    width: 100vw;
+    cursor: pointer;
+   }
+
+   #mainFooter div#footerFrame{height: 15rem;}
 }

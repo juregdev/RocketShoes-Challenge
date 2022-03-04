@@ -34,14 +34,47 @@
     <div id="searchBag">
       <div id="search">
         <form action="#">
-          <img id="lipa" src="./IMG/icon-search.svg" alt="">
+          <img id="lipa" src="./IMG/icon-search.svg" for="searchInput" alt="">
           <input aria-label="Pesquisa" type="search" name="search" placeholder="Pesquisa" id="searchInput">
         </form>
       </div>
-      <img src="./IMG/icon-bag.svg" alt="">
+      <a href="">
+        <img src="./IMG/icon-bag.svg" alt="">
+      </a>
+    </div>
+
+    <div id="logoMobile">
+      <a href="index.html">
+        <img src="./IMG/logo.svg" alt="">
+      </a>
+    </div>
+    <div id="searchMobile">
+      <form action="#">
+        <img id="lipa" src="./IMG/icon-search.svg" for="searchInput" alt="">
+        <input aria-label="Pesquisa" type="search" name="search" placeholder="Pesquisa" id="searchInput">
+      </form>
+    </div>
+
+    <div id="burguer" onclick="dropMenu()">
+      <div id="line1"></div>
+      <div id="line2"></div>
+      <div id="line3"></div>
     </div>
 
   </header>
+
+  <div id="menuMobile">
+    <nav>
+      <ul>
+        <li style="margin-top: 10rem;"><a href=""><img src="./IMG/icon-bag.svg" alt=""></a></li>
+        <li><a href="">HOMEM</a></li>
+        <li><a href="">MULHER</a></li>
+        <li><a href="">CRIANÇA</a></li>
+        <li><a href="">CUSTOMIZAR</a></li>
+      </ul>
+    </nav>
+  </div>
+
   <main id="conteiner">
     <div id="description">
       <div>
@@ -54,9 +87,9 @@
           Esse tênis tem o intuito de te deixar ainda mais fitness, focado, e musculoso.
         </p>
         <h1>R$ 1.000,00</h1>
-        <center>
-          <button>COMPRAR</button>
-        </center>
+
+        <button>COMPRAR</button>
+
       </div>
 
     </div>
