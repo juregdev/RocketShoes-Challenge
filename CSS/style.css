@@ -227,6 +227,8 @@ object-fit: cover;
   font-size: 60px;
   font-weight: 700;
 }
+#description #price{font-size:50px;
+text-align: center;}
 
 #description p{
 color: var(--text-description);
@@ -249,18 +251,7 @@ margin: 2rem auto 2rem auto;
   cursor: pointer;
   
 }
-@media screen and (max-width:300px){
-  
-  #description h1{font-size: 30px;
-  text-align: center;
-padding-left: 2rem;
-padding-right: 2rem;}
-  #description button{font-size:18px}
 
-  #description p{font-size: 12px;}
-
-
-}
 
 @media screen and (max-width:1000px){
   #conteiner{
@@ -281,12 +272,38 @@ padding-right: 2rem;}
   #description button {width: 80vw;}
 }
 
+@media  screen and (max-width:600px) {
+  #description h1{font-size:50px}
+  #description button{font-size:18px;
+    width:50vw;
+   height: 3rem;}
+
+   #description #price{font-size:40px;}
+
+   #description p{ padding: 0 1rem 0 1rem;
+  
+}}
+
+@media screen and (max-width:400px){
+  
+  #description h1{font-size: 30px;
+  text-align: center;
+padding-left: 2rem;
+padding-right: 2rem;}
+
+#description #price{font-size:25px;}
+  
+
+  #description p{font-size: 12px;}
+
+
+}
+
 @media screen and (max-width:1000px){#galeria section{width: 100vw;}
 #galeria section img{width: 30vw;}
 
 #vitrine img{width: 100%;}
 }
-
 
 
 
