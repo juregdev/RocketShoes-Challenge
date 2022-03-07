@@ -37,6 +37,7 @@ header{
   position: absolute;
   width: 100vw;
   top: 3rem;
+  z-index: 1;
 }
 
 #logo img{
@@ -218,7 +219,8 @@ height: 100%;
 object-fit: cover;
 }
 
-#galeria section img:hover{border-bottom: 5px solid var(--button);}
+#galeria section img:hover{border-bottom: 5px solid var(--button);
+};
 
 
 #description div{width: 22rem;}
@@ -320,7 +322,8 @@ footer #mainFooter{ display: flex;}
 
  }
 
- #mainFooter #footerLink:hover, #footerLink1:hover{border-top: 1px solid var(--button);}
+ #mainFooter #footerLink:hover, #footerLink1:hover{border-top: 1px solid var(--button);
+box-sizing: border-box;}
 
 #footerLink {
   text-align: center;
